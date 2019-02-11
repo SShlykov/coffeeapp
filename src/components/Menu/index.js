@@ -1,2 +1,2 @@
-import Header from "./Header";
-export default Header;
+import Menu from "./Menu";
+export default Menu;
