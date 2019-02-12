@@ -1,10 +1,13 @@
-import React, {Component} from "react";
+import React from "react";
 import coffee from "./img/CoffeeShade.jpg";
 import Item, {BeansLogo} from "../../SmallComp";
 
-export default class ForYourPleasure extends Component {
-    render() {
-        let imageSrc = "https://images-na.ssl-images-amazon.com/images/I/71qBQnpQFYL._SL1500_.jpg"
+ const ForYourPleasure = ({data}) => {
+        const items = data.map(item=>{
+            const {id, name, weight, country, price} = item;
+            let imageSrc = "https://images-na.ssl-images-amazon.com/images/I/71qBQnpQFYL._SL1500_.jpg";
+            return <Item key={id} id={id} name={name} weight={weight} country={country} price={price} imgSrc={imageSrc}/>
+        });
         return(
             <section className="shop">
                 <div className="container">
@@ -31,17 +34,12 @@ export default class ForYourPleasure extends Component {
                     <div className="row">
                         <div className="col-lg-10 offset-1">
                             <div className="shop__wrapper">
-                                <Item name="AROMISTICO Coffee" weight="1" country="Brazil" price="6.99" imgSrc={imageSrc}/>
-                                <Item name="AROMISTICO Coffee" weight="1" country="Kenya" price="6.99" imgSrc={imageSrc}/>
-                                <Item name="AROMISTICO Coffee" weight="1" country="Columbia" price="6.99" imgSrc={imageSrc}/>
-                                <Item name="AROMISTICO Coffee" weight="1" country="Brazil" price="6.99" imgSrc={imageSrc}/>
-                                <Item name="AROMISTICO Coffee" weight="1" country="Brazil" price="6.99" imgSrc={imageSrc}/>
-                                <Item name="AROMISTICO Coffee" weight="1" country="Brazil" price="6.99" imgSrc={imageSrc}/>
+                                {items}
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         )
-    }
-}
+};
+export default ForYourPleasure;
