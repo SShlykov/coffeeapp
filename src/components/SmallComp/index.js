@@ -5,7 +5,7 @@ import logo from "./logo/Logo.svg";
 import logoBlack from "./logo/Logo_black.svg"
 
 const Image = ({src, className, alt}) => {
-    return <img src={src} className={className} alt={alt} />
+    return <img src={src} className={className} alt={alt} width="120px" height="50px"/>
 };
 const BeansLogo = ({dark}) => {
     let src=beansLogo;

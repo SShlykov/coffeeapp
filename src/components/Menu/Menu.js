@@ -5,11 +5,11 @@ import {Link} from 'react-router-dom';
 const Menu = ({dark}) => {
     let curLogo = logo;
     let clazzName = "header__item";
-    let containerClass = "col-lg-6";
+    let containerClass = "col-lg-8";
     if(dark){
         curLogo = logoBlack;
-        clazzName = "footer__item";
-        containerClass= "col-lg-6 offset-lg-3"
+        clazzName = "footer__item bold";
+        containerClass= "col-lg-8 offset-lg-3"
     }
     return(
             <div className="row">
