@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import coffee from "./img/CoffeeShade.jpg";
-import {BeansLogo, Item} from "../../SmallComp";
+import Item, {BeansLogo} from "../../SmallComp";
 
 export default class ForYourPleasure extends Component {
     render() {

@@ -1,9 +1,23 @@
 import React, {Component} from "react";
 import girl from "./img/coffee_girl.jpg"
-import {Item, BeansLogo} from "../../SmallComp"
+import Item,{ BeansLogo} from "../../SmallComp"
 
 export default class OurCoffee extends Component {
+    state = {
+      data: [
+          {id: 1, name:"Solimo Coffee Beans", weight:"2", country:"Brazil", price:"10.73"},
+          {id: 2, name:"Presto Coffee Beans", weight:"1", country:"Brazil", price:"15.99"},
+          {id: 3, name:"Solimo Coffee Beans", weight:"1", country:"Brazil", price:"6.99", imgSrc:"https://hhp-blog.s3.amazonaws.com/2018/07/iStock-673468996.jpg"},
+          {id: 4, name:"Solimo Coffee Beans", weight:"2", country:"Brazil", price:"10.73"},
+          {id: 5, name:"Solimo Coffee Beans", weight:"2", country:"Brazil", price:"10.73", imgSrc:"https://i0.wp.com/www.healthline.com/hlcmsresource/images/AN_images/AN275-cup-of-coffee-732x549-Thumb.jpg?w=756"},
+          {id: 6, name:"Solimo Coffee Beans", weight:"2", country:"Brazil", price:"10.73"},
+      ]
+    };
     render() {
+        const items = this.state.data.map(item=>{
+            const {id, name, weight, country, price, imgSrc} = item;
+            return <Item key={id} id={id} name={name} weight={weight} country={country} price={price} imgSrc={imgSrc}/>
+        });
         return(
             <section className="shop">
                 <div className="container">
@@ -27,7 +41,7 @@ export default class OurCoffee extends Component {
                     </div>
                     <div className="line"> </div>
                     <div className="row">
-                        <div className="col-lg-4 offset-2">
+                        <div className="col-lg-4 offset-lg-2">
                             <form action="#" className="shop__search">
                                 <label className="shop__search-label" htmlFor="filter">Looking for</label>
                                 <input id="filter" type="text" placeholder="start typing here..." className="shop__search-input"/>
@@ -49,12 +63,7 @@ export default class OurCoffee extends Component {
                     <div className="row">
                         <div className="col-lg-10 offset-lg-1">
                             <div className="shop__wrapper">
-                                <Item name="Solimo Coffee Beans" weight="2" country="Brazil" price="10.73"/>
-                                <Item name="Presto Coffee Beans" weight="1" country="Brazil" price="15.99"/>
-                                <Item name="AROMISTICO Coffee" weight="1" country="Brazil" price="6.99" imgSrc="https://hhp-blog.s3.amazonaws.com/2018/07/iStock-673468996.jpg"/>
-                                <Item name="Solimo Coffee Beans" weight="2" country="Brazil" price="10.73"/>
-                                <Item name="Solimo Coffee Beans" weight="2" country="Brazil" price="10.73" imgSrc="https://i0.wp.com/www.healthline.com/hlcmsresource/images/AN_images/AN275-cup-of-coffee-732x549-Thumb.jpg?w=756"/>
-                                <Item name="Solimo Coffee Beans" weight="2" country="Brazil" price="10.73"/>
+                                {items}
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import {BeansLogo} from "../SmallComp";
 
 const FirstScreen = () => {
@@ -11,9 +12,9 @@ const FirstScreen = () => {
                         We makes every day full of energy and taste
                     </div>
                     <div className="preview__subtitle">Want to try our beans?</div>
-                    <a href="#prev" className="preview__btn">
+                    <Link to="/ourcoffee" className="preview__btn">
                         More
-                    </a>
+                    </Link>
                 </div>
             </div>
     )

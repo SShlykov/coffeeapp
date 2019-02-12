@@ -1,8 +1,19 @@
 import React, {Component} from "react";
-import {BeansLogo, Item} from "../../SmallComp";
+import Item, {BeansLogo} from "../../SmallComp";
 
 export default class MainPage extends Component {
+    state = {
+        data: [
+            {id: 2, name:"Solimo Coffee Beans", weight:"2", price:"10.73"},
+            {id: 56, name:"Presto Coffee Beans", weight:"1", price:"15.99"},
+            {id: 41, name:"AROMISTICO Coffee", weight:"1", price:"6.99"}
+        ]
+    };
     render() {
+        const items = this.state.data.map(item=>{
+            const {id, type="best", name, weight, price, imgSrc} = item;
+            return <Item key={id} id={id} type={type} name={name} weight={weight} price={price} imgSrc={imgSrc}/>
+        });
         return(
             <>
                 <section className="about">
@@ -37,9 +48,7 @@ export default class MainPage extends Component {
                         <div className="row">
                             <div className="col-lg-10 offset-lg-1">
                                 <div className="best__wrapper">
-                                    <Item type="best" name="Solimo Coffee Beans" weight="2" price="10.73"/>
-                                    <Item type="best" name="Presto Coffee Beans" weight="1" price="15.99"/>
-                                    <Item type="best" name="AROMISTICO Coffee" weight="1" price="6.99"/>
+                                    {items}
                                 </div>
                             </div>
                         </div>

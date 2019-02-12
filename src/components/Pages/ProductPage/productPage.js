@@ -16,7 +16,7 @@ export default class ProductPage extends Component {
                             <img className="shop__girl" src={coffeeitem} alt="coffee_item"/>
                         </div>
                         <div className="col-lg-4">
-                            <div className="title">About it</div>
+                            <div className="title">About {this.props.id}</div>
                             <BeansLogo dark/>
                                 <div className="shop__point">
                                     <span>Country:</span>
