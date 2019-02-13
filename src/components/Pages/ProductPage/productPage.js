@@ -1,22 +1,28 @@
 import React, {Component} from "react";
-import coffeeitem from "./img/coffee_item.jpg"
 import {BeansLogo} from "../../SmallComp";
+import cDataService from "../../../services/cDataService";
 
 export default class ProductPage extends Component {
     state = {
-        data: { country: "Brazil", description: "Lorem", price: "16.99$" }
+        data: []
     };
+    cDataService = new cDataService();
+    componentDidMount() {
+        this.cDataService.getCoffee(this.props.id)
+            .then((item)=>{this.setState({data: item})})
+    }
+
     render() {
-        const { country, description, price} = this.state.data;
+        const {name, country, description, price, url} = this.state.data;
         return(
             <div className="productPage">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-5 offset-1">
-                            <img className="shop__girl" src={coffeeitem} alt="coffee_item"/>
+                            <img className="shop__girl" src={url} alt="coffee_item" style={{maxWidth: "100%"}}/>
                         </div>
                         <div className="col-lg-4">
-                            <div className="title">About {this.props.id}</div>
+                            <div className="title">About {name}</div>
                             <BeansLogo dark/>
                                 <div className="shop__point">
                                     <span>Country:</span>

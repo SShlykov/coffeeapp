@@ -3,8 +3,8 @@ import Item, {BeansLogo} from "../../SmallComp";
 
 const MainPage = ({data}) => {
         const items = data.map(item=>{
-            const {id, type="best", name, weight, price, imgSrc} = item;
-            return <Item key={id} id={id} type={type} name={name} weight={weight} price={price} imgSrc={imgSrc}/>
+            const {id, type="best", name, weight, price, imgSrc, url} = item;
+            return <Item key={id} id={id} type={type} name={name} weight={weight} price={price} imgSrc={imgSrc||url}/>
         });
         return(
             <>

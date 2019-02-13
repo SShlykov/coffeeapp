@@ -38,10 +38,10 @@ const Item = ({history, key, id, name, weight, price, country = undefined, type=
                 alt="coffee"
             />
             <div className={`${bemClass}__item-title`}>
-                {name} {weight}kg
+                {name} {weight}
             </div>
             {currCountry}
-            <div className={`${bemClass}__item-price`}>{price}$</div>
+            <div className={`${bemClass}__item-price`}>{price}</div>
         </div>
     )
 };

@@ -3,30 +3,26 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import FirstScreen from "../FirstScreen";
 import {Contacts, ForYourPleasure, MainPage, OurCoffee, ProductPage} from "../Pages"
 import Footer from  "../Footer";
+import cDataService from "../../services/cDataService"
 
 export default class App extends Component {
     state = {
-        data: [
-            {id: 1, name:"Solimo Coffee Beans", weight:"2", price:"10.73"},
-            {id: 2, name:"Presto Coffee Beans", weight:"1", price:"15.99"},
-            {id: 3, name:"AROMISTICO Coffee", weight:"1", price:"6.99"},
-            {id: 4, name:"AROMISTICO Coffee", weight:"1", price:"6.99"},
-            {id: 10, name:"AROMISTICO Coffee", weight:"1", country:"Brazil", price:"6.99"},
-            {id: 11, name:"AROMISTICO Coffee", weight:"1", country:"Kenya", price:"6.99"},
-            {id: 12, name:"AROMISTICO Coffee", weight:"1", country:"Columbia", price:"6.99"},
-            {id: 13, name:"AROMISTICO Coffee", weight:"1", country:"Brazil", price:"6.99"},
-            {id: 14, name:"AROMISTICO Coffee", weight:"1", country:"Brazil", price:"6.99"},
-            {id: 15, name:"AROMISTICO Coffee", weight:"1", country:"Brazil", price:"6.99"},
-            {id: 21, name:"Solimo Coffee Beans", weight:"2", country:"Brazil", price:"10.73"},
-            {id: 22, name:"Presto Coffee Beans", weight:"1", country:"Brazil", price:"15.99"},
-            {id: 23, name:"Solimo Coffee Beans", weight:"1", country:"Columbia", price:"6.99", imgSrc:"https://hhp-blog.s3.amazonaws.com/2018/07/iStock-673468996.jpg"},
-            {id: 24, name:"Solimo Coffee Beans", weight:"2", country:"Brazil", price:"10.73"},
-            {id: 25, name:"Solimo Coffee Beans", weight:"2", country:"Brazil", price:"10.73", imgSrc:"https://i0.wp.com/www.healthline.com/hlcmsresource/images/AN_images/AN275-cup-of-coffee-732x549-Thumb.jpg?w=756"},
-            {id: 26, name:"Solimo Coffee Beans", weight:"2", country:"Brazil", price:"10.73"},
-        ],
+        coffeeData: [],
+        best: [],
+        goods:[],
         term: "",
         filter: ""
     };
+    cDataService = new cDataService();
+    componentDidMount() {
+        let service = this.cDataService;
+        service.getAllBestsellers()
+            .then((items) => {this.setState({best: items})})
+        service.getAllCoffee()
+            .then((items) => {this.setState({coffeeData: items})})
+        service.getAllGoods()
+            .then((items) => {this.setState({goods: items})})
+    }
     onType = e => {
         const term = e.target.value;
         this.setState({term});
@@ -40,7 +36,7 @@ export default class App extends Component {
             return item.name.toLowerCase().indexOf(term.toLowerCase())>-1;
         });
     };
-    filter(items, filter) {
+    filter = (items, filter) => {
         switch (filter) {
             case "Brazil":
                 return items.filter(item => item.country === "Brazil");
@@ -59,20 +55,14 @@ export default class App extends Component {
         this.setState({ filter });
     };
   render() {
-      let bestId = [1,2,3];
-      let FYPId = [10,11,12,13,14,15];
-      let regularId = [21,22,23,24,25,26];
-      const searchItems = (obj, arr) => obj.filter(item => {
-          if(arr.includes(item.id)){
-              return item
-          }
-          return null
-      })
-      const {data, term, filter} = this.state;
-      const visibleData = this.filter(this.search(data, term), filter);
-      const bestItems = searchItems(visibleData, bestId);
-      const FYPItems = searchItems(visibleData, FYPId);
-      const regularItems = searchItems(visibleData, regularId);
+      const filterForMe = (data, filter, term) => {
+          return this.filter(this.search(data, term), filter)
+      }
+      const {coffeeData, best, goods, term, filter} = this.state;
+      const bestItems = filterForMe(best, filter, term);
+      const FYPItems = filterForMe(goods, filter, term);
+      const regularItems = filterForMe(coffeeData, filter, term);
+      console.log(this.state.data);
     return (
       <Router>
           <>

@@ -13,8 +13,8 @@ export default class OurCoffee extends Component {
     };
     render() {
         const items = this.props.data.map(item => {
-            const {id, name, weight, country, price, imgSrc} = item;
-            return <Item key={id} id={id} name={name} weight={weight} country={country} price={price} imgSrc={imgSrc}/>
+            const {id, name, weight, country, price, imgSrc, url} = item;
+            return <Item key={id} id={id} name={name} weight={weight} country={country} price={price} imgSrc={imgSrc||url}/>
         });
         return (
             <section className="shop">

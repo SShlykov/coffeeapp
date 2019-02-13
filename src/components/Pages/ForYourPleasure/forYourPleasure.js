@@ -4,9 +4,9 @@ import Item, {BeansLogo} from "../../SmallComp";
 
  const ForYourPleasure = ({data}) => {
         const items = data.map(item=>{
-            const {id, name, weight, country, price} = item;
+            const {id, name, weight, country, price, url} = item;
             let imageSrc = "https://images-na.ssl-images-amazon.com/images/I/71qBQnpQFYL._SL1500_.jpg";
-            return <Item key={id} id={id} name={name} weight={weight} country={country} price={price} imgSrc={imageSrc}/>
+            return <Item key={id} id={id} name={name} weight={weight} country={country} price={price} imgSrc={url||imageSrc}/>
         });
         return(
             <section className="shop">
