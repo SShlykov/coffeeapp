@@ -10,6 +10,9 @@ export default class CoffeeService {
         }
         return await res.json();
     };
+    postMessage = async (data) => {
+      console.log(data);
+    };
 
     getAllBestsellers = async () => {
         const res = await this.getResource('/bestsellers');
