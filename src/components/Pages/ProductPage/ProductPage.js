@@ -1,7 +1,22 @@
-import React from "react";
+import React, {Component} from "react";
 import {BeansLogo} from "../../SmallComp";
 
-const ProductPage = ({name, country, description, price, url}) => {
+export default class ProductPage extends Component  {
+    state ={
+        isSmall: true
+    };
+    onToggle = () => {
+        this.setState({
+            isSmall: false
+        })
+    };
+    render() {
+        const {name, country, description, price, url, smallDescr} = this.props;
+        let {isSmall} = this.state;
+        let descr = description;
+        if(isSmall&&smallDescr){
+            descr = smallDescr;
+        }
         return (
             <div className="productPage">
                 <div className="container">
@@ -16,9 +31,9 @@ const ProductPage = ({name, country, description, price, url}) => {
                                 <span>Country:</span>
                                 {country}
                             </div>
-                            <div className="shop__point">
+                            <div className="shop__point" onClick={this.onToggle}>
                                 <span>Description:</span>
-                                {description}
+                                {descr}
                             </div>
                             <div className="shop__point">
                                 <span>Price:</span>
@@ -29,5 +44,5 @@ const ProductPage = ({name, country, description, price, url}) => {
                 </div>
             </div>
         )
+    }
 };
-export default ProductPage;
