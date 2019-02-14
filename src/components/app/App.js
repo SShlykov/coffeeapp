@@ -86,7 +86,7 @@ export default class App extends Component {
                       return <ErrorCatcher id={id} />
                   }}/>
                   <Route exact path="/foryourpleasure/" component={() => <ForYourPleasure data={goods}/>}/>
-                  <Route exact path="/contacts/" component={Contacts}/>
+                  <Route exact path="/contacts/" render={() => <Contacts/>}/>
               <Footer/>
           </>
       </Router>

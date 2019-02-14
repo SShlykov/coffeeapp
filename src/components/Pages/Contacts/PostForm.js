@@ -19,19 +19,18 @@ export default class Form extends Component {
         this.setState({
             data: {name:name, email:email, phone:phone, message: message}
         });
-        return 1
     };
     submitFunc = async (e) =>{
         const {name, email, phone, message} = this.state;
         e.preventDefault();
         await this.updateDataObj(name, email, phone, message);
-        this.cDataService.postMessage(this.state.data)
-            .then(this.props.submitListener());
+        await this.cDataService.postMessage(this.state.data);
+        await this.props.submitListener();
     };
     render() {
         const  {name, message, phone, email} = this.state;
         return (
-            <form onSubmit={this.submitFunc} className="contact-form">
+            <form onSubmit={this.submitFunc} method="POST" className="contact-form">
                 <label htmlFor="name" className="col-6 contact-label importantInput">Name</label>
                 <input
                     type="name"

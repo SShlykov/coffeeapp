@@ -10,8 +10,16 @@ export default class CoffeeService {
         }
         return await res.json();
     };
-    postMessage = async (data) => {
-      console.log(data);
+    postMessage = (data) => {
+        let options = {
+            method: "POST",
+            headers: {
+                    'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({data})
+        };
+        fetch(`${this._apiBase}/messages`, options)
+            .catch((err) =>console.log(err))
     };
 
     getAllBestsellers = async () => {
