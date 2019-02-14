@@ -1,11 +1,9 @@
 import React from "react";
-import Item, {BeansLogo} from "../../SmallComp";
+import {BeansLogo} from "../../SmallComp";
+import Items from "../../Items";
 
 const MainPage = ({data}) => {
-        const items = data.map(item=>{
-            const {id, type="best", name, weight, price, imgSrc, url} = item;
-            return <Item key={id} id={id} type={type} name={name} weight={weight} price={price} imgSrc={imgSrc||url}/>
-        });
+
         return(
             <>
                 <section className="about">
@@ -37,13 +35,7 @@ const MainPage = ({data}) => {
                 <section className="best">
                     <div className="container">
                         <div className="title">Our best</div>
-                        <div className="row">
-                            <div className="col-lg-10 offset-lg-1">
-                                <div className="best__wrapper">
-                                    {items}
-                                </div>
-                            </div>
-                        </div>
+                        <Items data={data} type="best"/>
                     </div>
                 </section>
             </>

@@ -1,2 +1,2 @@
-import OurCoffee from "./ourCoffee";
+import OurCoffee from "./OurCoffeePage";
 export default OurCoffee;

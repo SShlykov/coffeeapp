@@ -458,6 +458,9 @@ body {
   outline: 0;
   cursor: pointer;
 }
+.active {
+  background-color: lightgray;
+}
 .shop__filter-btn:first-child {
   border-radius: 4px 0 0 4px;
 }

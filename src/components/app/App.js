@@ -5,7 +5,6 @@ import {Contacts, ForYourPleasure, MainPage, OurCoffee, ProductPage} from "../Pa
 import Footer from  "../Footer";
 import cDataService from "../../services/cDataService"
 import Items from "../Items";
-import FilterOrSearchPanel from "../FilterPanel/";
 
 export default class App extends Component {
     state = {
@@ -58,9 +57,7 @@ export default class App extends Component {
         this.setState({ filter });
     };
   render() {
-      const filterForMe = (data, filter, term) => {
-          return this.filter(this.search(data, term), filter)
-      }
+      const filterForMe = (data, filter, term) => this.filter(this.search(data, term), filter);
       const {coffeeData, best, goods, term, filter} = this.state;
       const bestItems = best;
       const FYPItems = goods;
@@ -76,15 +73,7 @@ export default class App extends Component {
                   <Route path="/contacts/" component={() => <FirstScreen heading="Contact Us"/>}/>
               </Switch>
                   <Route exact path="/" component={() => <MainPage data={bestItems}/>}/>
-                  <Route exact path="/ourcoffee/" render={() => { return(
-                      <section className="shop">
-                          <div className="container">
-                            <OurCoffee/>
-                            <FilterOrSearchPanel onSearchChange={this.onSearchChange} filter={filter} onFilterChange={this.onFilterChange}/>
-                            <Items data={regularItems}/>
-                          </div>
-                      </section>
-                  )}}/>
+                  <Route exact path="/ourcoffee/" render={() => <OurCoffee data={regularItems} filter={filter} onFilterChange={this.onFilterChange} onSearchChange={this.onSearchChange}/>}/>
                   <Route exact path="/ourcoffee/:id" component={({match}) => {
                       const {id} = match.params;
                       return <ProductPage id={id} />

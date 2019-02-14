@@ -2,7 +2,7 @@ import React from "react";
 import girl from "./img/coffee_girl.jpg";
 import { BeansLogo} from "../../SmallComp";
 
-const OurCoffee = () => {
+const Title = () => {
         return (
             <>
                 <div className="row">
@@ -27,4 +27,4 @@ const OurCoffee = () => {
             </>
         )
 };
-export default OurCoffee;
+export default Title;

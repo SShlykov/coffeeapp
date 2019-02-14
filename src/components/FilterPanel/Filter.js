@@ -10,10 +10,11 @@ export default class Filter extends Component {
         const {filter, onFilterChange} = this.props;
         const buttons = this.buttons.map(({name}) => {
             const isActive = filter === name;
+            const clazzName = isActive? "shop__filter-btn active": "shop__filter-btn";
             return(
                 <button
                     key={name}
-                    className="shop__filter-btn"
+                    className={clazzName}
                     onClick={()=> onFilterChange(name)}
                 >
                     {name}
