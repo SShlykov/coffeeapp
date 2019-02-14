@@ -2,6 +2,6 @@ import Contacts from "./Contacts";
 import ForYourPleasure from "./ForYourPleasure";
 import MainPage from "./MainPage";
 import OurCoffee from "./OurCoffee";
-import ProductPage from "./ProductPage"
+import ErrorCatcher from "./ProductPage"
 
-export {Contacts, ForYourPleasure, MainPage, OurCoffee, ProductPage}
+export {Contacts, ForYourPleasure, MainPage, OurCoffee, ErrorCatcher}

@@ -619,3 +619,23 @@ textarea{
 .productPage{
 	padding: 70px 0 30px;
 }
+.error {
+  max-width: 100%;
+  min-height: 100%;
+}
+.error-title{
+  color: darkred;
+  font-size: 3em;
+}
+.error-description{
+  margin-top: 1%;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+.center{
+  text-align: center;
+}
+.black-btn{
+  color: black !important;
+  border: 1px solid black;
+}

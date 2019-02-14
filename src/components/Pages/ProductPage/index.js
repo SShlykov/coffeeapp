@@ -1,2 +1,2 @@
-import ProductPage from "./productPage";
-export default ProductPage;
+import ErrorCatcher from "./ErrorCatcher";
+export default ErrorCatcher;

@@ -1,11 +1,11 @@
 import React from "react";
-import Item from "../SmallComp";
+import Item from "../Item";
 
 const Items = ({data, type}) => {
     const isBest = (type === "best")? "best": "shop";
     const items = data.map(item => {
-        const {id, name, weight, country, price, imgSrc, url} = item;
-        return <Item key={id} id={id} type={isBest} name={name} weight={weight} country={country} price={price} imgSrc={imgSrc||url}/>
+        const {id} = item;
+        return <Item key={id} id={id} type={isBest} />
     });
     return(
         <div className="row">

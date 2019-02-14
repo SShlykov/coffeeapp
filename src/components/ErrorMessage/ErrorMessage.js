@@ -1,27 +1,29 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
-const ErrorMessage = ({error}) => {
-    const errURL = (errStatus) => process.env.PUBLIC_URL + `/img/error${errStatus}.png`;
-    let errorURL = errURL(error);
+const ErrorMessage = ({error, button}) => {
     let errorMes= `Error status: ${error}`;
     switch (error) {
         case "404":
-            errorMes = `${error} data not found`;
+            errorMes = `data not found`;
             break;
         case "408":
-            errorMes = `${error} request timeout`;
+            errorMes = `request timeout`;
             break;
         case "410":
-            errorMes = `${error} gone`;
+            errorMes = `gone`;
             break;
         default:
-            errorURL = errURL(1);
+            errorMes= `Error status: ${error}`;
     }
+    const link = (button)? <Link to="/" className="preview__btn black-btn">back to main</Link>:null;
     return (
-        <>
-            <img src={errorURL} alt="error"/>
-            <span>{errorMes}</span>
-        </>
+        <div className="error">
+            <h2 className="error-title center">{error}</h2>
+            <div className="center">{errorMes}</div>
+            <div className="center error-description">We are about to fix it</div>
+            {link}
+        </div>
     )
 };
 export default ErrorMessage;

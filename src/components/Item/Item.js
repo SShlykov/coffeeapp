@@ -1,9 +1,11 @@
 import React from "react";
+import {withRouter} from "react-router-dom";
 
-const Item = ({history, key, id, name, weight, price, country = undefined, type="shop", imgSrc="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg"}) => {
+
+const CurrItem = ({ id, type, country, name, imgSrc, weight, price, history }) => {
     let bemClass = type;
     let currCountry = null;
-    if(type === "shop" && country){
+    if (type === "shop" && country) {
         currCountry = <div className="shop__item-country">{country}</div>
     }
     let click = (id) => {
@@ -25,4 +27,4 @@ const Item = ({history, key, id, name, weight, price, country = undefined, type=
         </div>
     )
 };
-export default Item;
+export default withRouter(CurrItem);

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import FirstScreen from "../FirstScreen";
-import {Contacts, ForYourPleasure, MainPage, OurCoffee, ProductPage} from "../Pages"
+import {Contacts, ForYourPleasure, MainPage, OurCoffee, ErrorCatcher} from "../Pages"
 import Footer from  "../Footer";
-import cDataService from "../../services/cDataService"
-import Items from "../Items";
+import cDataService from "../../services/cDataService";
+import ErrorMessage from "../ErrorMessage";
 
 export default class App extends Component {
     state = {
@@ -12,7 +12,8 @@ export default class App extends Component {
         best: [],
         goods:[],
         term: "",
-        filter: ""
+        filter: "",
+        error: false,
     };
     cDataService = new cDataService();
     componentDidMount() {
@@ -24,6 +25,12 @@ export default class App extends Component {
         service.getAllGoods()
             .then((items) => {this.setState({goods: items})})
     }
+    componentDidCatch(error) {
+        this.setState({
+            error: error.name||error.message
+        })
+    }
+
     onType = e => {
         e.preventDefault();
         const term = e.target.value;
@@ -59,10 +66,10 @@ export default class App extends Component {
   render() {
       const filterForMe = (data, filter, term) => this.filter(this.search(data, term), filter);
       const {coffeeData, best, goods, term, filter} = this.state;
-      const bestItems = best;
-      const FYPItems = goods;
       const regularItems = filterForMe(coffeeData, filter, term);
-      console.log(this.state.data);
+      if (this.state.error){
+          return <ErrorMessage error={this.state.error}/>
+      }
     return (
       <Router>
           <>
@@ -72,13 +79,13 @@ export default class App extends Component {
                   <Route path="/foryourpleasure/" component={() => <FirstScreen heading="For your pleasure"/>}/>
                   <Route path="/contacts/" component={() => <FirstScreen heading="Contact Us"/>}/>
               </Switch>
-                  <Route exact path="/" component={() => <MainPage data={bestItems}/>}/>
+                  <Route exact path="/" component={() => <MainPage data={best}/>}/>
                   <Route exact path="/ourcoffee/" render={() => <OurCoffee data={regularItems} filter={filter} onFilterChange={this.onFilterChange} onSearchChange={this.onSearchChange}/>}/>
                   <Route exact path="/ourcoffee/:id" component={({match}) => {
                       const {id} = match.params;
-                      return <ProductPage id={id} />
+                      return <ErrorCatcher id={id} />
                   }}/>
-                  <Route exact path="/foryourpleasure/" component={() => <ForYourPleasure data={FYPItems}/>}/>
+                  <Route exact path="/foryourpleasure/" component={() => <ForYourPleasure data={goods}/>}/>
                   <Route exact path="/contacts/" component={Contacts}/>
               <Footer/>
           </>

@@ -24,8 +24,10 @@ export default class CoffeeService {
         return res.map(this._createId);
     };
     getCoffee = async (id) => {
-      const res = await this.getResource(`/coffee?q=${id}`)||await this.getResource(`/goods?q=${id}`);
-      console.log(res);
+      let res = await this.getResource(`/coffee?q=${id}`);
+      if(res.length === 0){
+          res = await this.getResource(`/goods?q=${id}`);
+      }
       return res[0];
     };
     _createId = (obj) => {
