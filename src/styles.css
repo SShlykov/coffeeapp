@@ -639,3 +639,7 @@ textarea{
   color: black !important;
   border: 1px solid black;
 }
+.letter{
+  color: red;
+  margin-top: -10px;
+}
