@@ -1,13 +1,9 @@
 import React from "react";
 import coffee from "./img/CoffeeShade.jpg";
-import Item, {BeansLogo} from "../../SmallComp";
+import {BeansLogo} from "../../SmallComp";
+import Items from "../../Items";
 
  const ForYourPleasure = ({data}) => {
-        const items = data.map(item=>{
-            const {id, name, weight, country, price, url} = item;
-            let imageSrc = "https://images-na.ssl-images-amazon.com/images/I/71qBQnpQFYL._SL1500_.jpg";
-            return <Item key={id} id={id} name={name} weight={weight} country={country} price={price} imgSrc={url||imageSrc}/>
-        });
         return(
             <section className="shop">
                 <div className="container">
@@ -31,13 +27,7 @@ import Item, {BeansLogo} from "../../SmallComp";
                         </div>
                     </div>
                     <div className="line"> </div>
-                    <div className="row">
-                        <div className="col-lg-10 offset-1">
-                            <div className="shop__wrapper">
-                                {items}
-                            </div>
-                        </div>
-                    </div>
+                    <Items data={data}/>
                 </div>
             </section>
         )
