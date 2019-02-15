@@ -1,15 +1,16 @@
 {
-  "name": "project",
+  "name": "app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
     "react-input-mask": "^2.0.4",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.4"
+    "react-scripts": "2.1.5"
   },
   "scripts": {
+    "server": "json-server --watch public/db.json --port 3001 | npm start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -23,5 +24,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "jest-extended": "^0.11.1",
+    "react-test-renderer": "^16.8.2"
+  }
 }

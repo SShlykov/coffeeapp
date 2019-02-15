@@ -1,0 +1,514 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <PostForm /> Testing snap & state PostForm has rendered correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Form />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <label
+          className="col-6 contact-label importantInput"
+          htmlFor="name"
+        >
+          Name
+        </label>,
+        <input
+          className="col-6 contact-input"
+          id="name"
+          onChange={[Function]}
+          required={true}
+          type="name"
+          value=""
+        />,
+        null,
+        <label
+          className="col-6 contact-label importantInput"
+          htmlFor="e-mail"
+        >
+          E-mail
+        </label>,
+        <input
+          className="col-6 contact-input"
+          id="email"
+          onChange={[Function]}
+          required={true}
+          type="e-mail"
+          value=""
+        />,
+        null,
+        <label
+          className="col-6 contact-label"
+          htmlFor="phone"
+        >
+          Phone
+        </label>,
+        <InputElement
+          className="col-6 contact-input"
+          id="phone"
+          mask="+7 (999) 999-9999"
+          onChange={[Function]}
+          placeholder="+7 (...) ...-...."
+          type="phone"
+          value=""
+        />,
+        <label
+          className="col-12 text-center contact-label importantInput"
+          htmlFor="message"
+          id="labelMes"
+        >
+          Your message
+        </label>,
+        <textarea
+          className="col-12"
+          id="message"
+          name="message"
+          onChange={[Function]}
+          placeholder="Tell us..."
+          required={true}
+          value=""
+        />,
+        null,
+        <div
+          className="centred"
+        >
+          <input
+            className="anotherButton"
+            type="submit"
+            value="Send us"
+          />
+        </div>,
+      ],
+      "className": "contact-form",
+      "method": "POST",
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Name",
+          "className": "col-6 contact-label importantInput",
+          "htmlFor": "name",
+        },
+        "ref": null,
+        "rendered": "Name",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "col-6 contact-input",
+          "id": "name",
+          "onChange": [Function],
+          "required": true,
+          "type": "name",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "E-mail",
+          "className": "col-6 contact-label importantInput",
+          "htmlFor": "e-mail",
+        },
+        "ref": null,
+        "rendered": "E-mail",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "col-6 contact-input",
+          "id": "email",
+          "onChange": [Function],
+          "required": true,
+          "type": "e-mail",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Phone",
+          "className": "col-6 contact-label",
+          "htmlFor": "phone",
+        },
+        "ref": null,
+        "rendered": "Phone",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "className": "col-6 contact-input",
+          "id": "phone",
+          "mask": "+7 (999) 999-9999",
+          "onChange": [Function],
+          "placeholder": "+7 (...) ...-....",
+          "type": "phone",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Your message",
+          "className": "col-12 text-center contact-label importantInput",
+          "htmlFor": "message",
+          "id": "labelMes",
+        },
+        "ref": null,
+        "rendered": "Your message",
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "className": "col-12",
+          "id": "message",
+          "name": "message",
+          "onChange": [Function],
+          "placeholder": "Tell us...",
+          "required": true,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "textarea",
+      },
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <input
+            className="anotherButton"
+            type="submit"
+            value="Send us"
+          />,
+          "className": "centred",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "anotherButton",
+            "type": "submit",
+            "value": "Send us",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <label
+            className="col-6 contact-label importantInput"
+            htmlFor="name"
+          >
+            Name
+          </label>,
+          <input
+            className="col-6 contact-input"
+            id="name"
+            onChange={[Function]}
+            required={true}
+            type="name"
+            value=""
+          />,
+          null,
+          <label
+            className="col-6 contact-label importantInput"
+            htmlFor="e-mail"
+          >
+            E-mail
+          </label>,
+          <input
+            className="col-6 contact-input"
+            id="email"
+            onChange={[Function]}
+            required={true}
+            type="e-mail"
+            value=""
+          />,
+          null,
+          <label
+            className="col-6 contact-label"
+            htmlFor="phone"
+          >
+            Phone
+          </label>,
+          <InputElement
+            className="col-6 contact-input"
+            id="phone"
+            mask="+7 (999) 999-9999"
+            onChange={[Function]}
+            placeholder="+7 (...) ...-...."
+            type="phone"
+            value=""
+          />,
+          <label
+            className="col-12 text-center contact-label importantInput"
+            htmlFor="message"
+            id="labelMes"
+          >
+            Your message
+          </label>,
+          <textarea
+            className="col-12"
+            id="message"
+            name="message"
+            onChange={[Function]}
+            placeholder="Tell us..."
+            required={true}
+            value=""
+          />,
+          null,
+          <div
+            className="centred"
+          >
+            <input
+              className="anotherButton"
+              type="submit"
+              value="Send us"
+            />
+          </div>,
+        ],
+        "className": "contact-form",
+        "method": "POST",
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Name",
+            "className": "col-6 contact-label importantInput",
+            "htmlFor": "name",
+          },
+          "ref": null,
+          "rendered": "Name",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "col-6 contact-input",
+            "id": "name",
+            "onChange": [Function],
+            "required": true,
+            "type": "name",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "E-mail",
+            "className": "col-6 contact-label importantInput",
+            "htmlFor": "e-mail",
+          },
+          "ref": null,
+          "rendered": "E-mail",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "col-6 contact-input",
+            "id": "email",
+            "onChange": [Function],
+            "required": true,
+            "type": "e-mail",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "input",
+        },
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Phone",
+            "className": "col-6 contact-label",
+            "htmlFor": "phone",
+          },
+          "ref": null,
+          "rendered": "Phone",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": "col-6 contact-input",
+            "id": "phone",
+            "mask": "+7 (999) 999-9999",
+            "onChange": [Function],
+            "placeholder": "+7 (...) ...-....",
+            "type": "phone",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Your message",
+            "className": "col-12 text-center contact-label importantInput",
+            "htmlFor": "message",
+            "id": "labelMes",
+          },
+          "ref": null,
+          "rendered": "Your message",
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "col-12",
+            "id": "message",
+            "name": "message",
+            "onChange": [Function],
+            "placeholder": "Tell us...",
+            "required": true,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "textarea",
+        },
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <input
+              className="anotherButton"
+              type="submit"
+              value="Send us"
+            />,
+            "className": "centred",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "anotherButton",
+              "type": "submit",
+              "value": "Send us",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "form",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

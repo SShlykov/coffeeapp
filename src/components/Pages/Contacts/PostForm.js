@@ -39,7 +39,7 @@ export default class Form extends Component {
     };
     _isEmailValid = (email) => {
         let errorEmail="";
-        let regex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm)
+        let regex = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm);
         if(!regex.test(email)){
             errorEmail="email is not valid";
             this.setState({errorEmail});
@@ -93,7 +93,6 @@ export default class Form extends Component {
                     value={name}
                     required
                     onChange={this.onType}
-                    error={this.state.errorName}
                 />
                 {errName}
                 <label htmlFor="e-mail" className="col-6 contact-label importantInput">E-mail</label>
@@ -104,7 +103,6 @@ export default class Form extends Component {
                     required
                     value={email}
                     onChange={this.onType}
-                    error={this.state.errorEmail}
                 />
                 {errEmail}
                 <label htmlFor="phone" className="col-6 contact-label">Phone</label>
@@ -127,9 +125,8 @@ export default class Form extends Component {
                     className="col-12"
                     value={message}
                     onChange={this.onType}
-                    error={this.state.errorMessage}
                 />
-                {errorMessage}
+                {errMessage}
                 <div className="centred">
                     <input
                         type="submit"

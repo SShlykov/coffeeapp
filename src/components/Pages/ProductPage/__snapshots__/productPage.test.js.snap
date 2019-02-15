@@ -1,0 +1,862 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <ProductPage/> Testing snap & state ProductPage have rendered correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ProductPage />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="container"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="col-lg-5 offset-1"
+          >
+            <img
+              alt="coffee_item"
+              className="shop__girl"
+              style={
+                Object {
+                  "maxWidth": "100%",
+                }
+              }
+            />
+          </div>
+          <div
+            className="col-lg-4"
+          >
+            <div
+              className="title"
+            >
+              About 
+            </div>
+            <BeansLogo
+              dark={true}
+            />
+            <div
+              className="shop__point"
+            >
+              <span>
+                Country:
+              </span>
+            </div>
+            <div
+              className="shop__point"
+              onClick={[Function]}
+            >
+              <span>
+                Description:
+              </span>
+            </div>
+            <div
+              className="shop__point"
+            >
+              <span>
+                Price:
+              </span>
+              <span
+                className="shop__point-price"
+              />
+            </div>
+          </div>
+        </div>
+      </div>,
+      "className": "productPage",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="row"
+        >
+          <div
+            className="col-lg-5 offset-1"
+          >
+            <img
+              alt="coffee_item"
+              className="shop__girl"
+              style={
+                Object {
+                  "maxWidth": "100%",
+                }
+              }
+            />
+          </div>
+          <div
+            className="col-lg-4"
+          >
+            <div
+              className="title"
+            >
+              About 
+            </div>
+            <BeansLogo
+              dark={true}
+            />
+            <div
+              className="shop__point"
+            >
+              <span>
+                Country:
+              </span>
+            </div>
+            <div
+              className="shop__point"
+              onClick={[Function]}
+            >
+              <span>
+                Description:
+              </span>
+            </div>
+            <div
+              className="shop__point"
+            >
+              <span>
+                Price:
+              </span>
+              <span
+                className="shop__point-price"
+              />
+            </div>
+          </div>
+        </div>,
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="col-lg-5 offset-1"
+            >
+              <img
+                alt="coffee_item"
+                className="shop__girl"
+                style={
+                  Object {
+                    "maxWidth": "100%",
+                  }
+                }
+              />
+            </div>,
+            <div
+              className="col-lg-4"
+            >
+              <div
+                className="title"
+              >
+                About 
+              </div>
+              <BeansLogo
+                dark={true}
+              />
+              <div
+                className="shop__point"
+              >
+                <span>
+                  Country:
+                </span>
+              </div>
+              <div
+                className="shop__point"
+                onClick={[Function]}
+              >
+                <span>
+                  Description:
+                </span>
+              </div>
+              <div
+                className="shop__point"
+              >
+                <span>
+                  Price:
+                </span>
+                <span
+                  className="shop__point-price"
+                />
+              </div>
+            </div>,
+          ],
+          "className": "row",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="coffee_item"
+                className="shop__girl"
+                style={
+                  Object {
+                    "maxWidth": "100%",
+                  }
+                }
+              />,
+              "className": "col-lg-5 offset-1",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "coffee_item",
+                "className": "shop__girl",
+                "src": undefined,
+                "style": Object {
+                  "maxWidth": "100%",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  className="title"
+                >
+                  About 
+                </div>,
+                <BeansLogo
+                  dark={true}
+                />,
+                <div
+                  className="shop__point"
+                >
+                  <span>
+                    Country:
+                  </span>
+                </div>,
+                <div
+                  className="shop__point"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Description:
+                  </span>
+                </div>,
+                <div
+                  className="shop__point"
+                >
+                  <span>
+                    Price:
+                  </span>
+                  <span
+                    className="shop__point-price"
+                  />
+                </div>,
+              ],
+              "className": "col-lg-4",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "About ",
+                    undefined,
+                  ],
+                  "className": "title",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "About ",
+                  undefined,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "dark": true,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span>
+                      Country:
+                    </span>,
+                    undefined,
+                  ],
+                  "className": "shop__point",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Country:",
+                    },
+                    "ref": null,
+                    "rendered": "Country:",
+                    "type": "span",
+                  },
+                  undefined,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span>
+                      Description:
+                    </span>,
+                    undefined,
+                  ],
+                  "className": "shop__point",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Description:",
+                    },
+                    "ref": null,
+                    "rendered": "Description:",
+                    "type": "span",
+                  },
+                  undefined,
+                ],
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span>
+                      Price:
+                    </span>,
+                    <span
+                      className="shop__point-price"
+                    />,
+                  ],
+                  "className": "shop__point",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Price:",
+                    },
+                    "ref": null,
+                    "rendered": "Price:",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": undefined,
+                      "className": "shop__point-price",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "span",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="container"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-lg-5 offset-1"
+            >
+              <img
+                alt="coffee_item"
+                className="shop__girl"
+                style={
+                  Object {
+                    "maxWidth": "100%",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="col-lg-4"
+            >
+              <div
+                className="title"
+              >
+                About 
+              </div>
+              <BeansLogo
+                dark={true}
+              />
+              <div
+                className="shop__point"
+              >
+                <span>
+                  Country:
+                </span>
+              </div>
+              <div
+                className="shop__point"
+                onClick={[Function]}
+              >
+                <span>
+                  Description:
+                </span>
+              </div>
+              <div
+                className="shop__point"
+              >
+                <span>
+                  Price:
+                </span>
+                <span
+                  className="shop__point-price"
+                />
+              </div>
+            </div>
+          </div>
+        </div>,
+        "className": "productPage",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="row"
+          >
+            <div
+              className="col-lg-5 offset-1"
+            >
+              <img
+                alt="coffee_item"
+                className="shop__girl"
+                style={
+                  Object {
+                    "maxWidth": "100%",
+                  }
+                }
+              />
+            </div>
+            <div
+              className="col-lg-4"
+            >
+              <div
+                className="title"
+              >
+                About 
+              </div>
+              <BeansLogo
+                dark={true}
+              />
+              <div
+                className="shop__point"
+              >
+                <span>
+                  Country:
+                </span>
+              </div>
+              <div
+                className="shop__point"
+                onClick={[Function]}
+              >
+                <span>
+                  Description:
+                </span>
+              </div>
+              <div
+                className="shop__point"
+              >
+                <span>
+                  Price:
+                </span>
+                <span
+                  className="shop__point-price"
+                />
+              </div>
+            </div>
+          </div>,
+          "className": "container",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="col-lg-5 offset-1"
+              >
+                <img
+                  alt="coffee_item"
+                  className="shop__girl"
+                  style={
+                    Object {
+                      "maxWidth": "100%",
+                    }
+                  }
+                />
+              </div>,
+              <div
+                className="col-lg-4"
+              >
+                <div
+                  className="title"
+                >
+                  About 
+                </div>
+                <BeansLogo
+                  dark={true}
+                />
+                <div
+                  className="shop__point"
+                >
+                  <span>
+                    Country:
+                  </span>
+                </div>
+                <div
+                  className="shop__point"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Description:
+                  </span>
+                </div>
+                <div
+                  className="shop__point"
+                >
+                  <span>
+                    Price:
+                  </span>
+                  <span
+                    className="shop__point-price"
+                  />
+                </div>
+              </div>,
+            ],
+            "className": "row",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt="coffee_item"
+                  className="shop__girl"
+                  style={
+                    Object {
+                      "maxWidth": "100%",
+                    }
+                  }
+                />,
+                "className": "col-lg-5 offset-1",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "coffee_item",
+                  "className": "shop__girl",
+                  "src": undefined,
+                  "style": Object {
+                    "maxWidth": "100%",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    className="title"
+                  >
+                    About 
+                  </div>,
+                  <BeansLogo
+                    dark={true}
+                  />,
+                  <div
+                    className="shop__point"
+                  >
+                    <span>
+                      Country:
+                    </span>
+                  </div>,
+                  <div
+                    className="shop__point"
+                    onClick={[Function]}
+                  >
+                    <span>
+                      Description:
+                    </span>
+                  </div>,
+                  <div
+                    className="shop__point"
+                  >
+                    <span>
+                      Price:
+                    </span>
+                    <span
+                      className="shop__point-price"
+                    />
+                  </div>,
+                ],
+                "className": "col-lg-4",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "About ",
+                      undefined,
+                    ],
+                    "className": "title",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "About ",
+                    undefined,
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "dark": true,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span>
+                        Country:
+                      </span>,
+                      undefined,
+                    ],
+                    "className": "shop__point",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Country:",
+                      },
+                      "ref": null,
+                      "rendered": "Country:",
+                      "type": "span",
+                    },
+                    undefined,
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span>
+                        Description:
+                      </span>,
+                      undefined,
+                    ],
+                    "className": "shop__point",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Description:",
+                      },
+                      "ref": null,
+                      "rendered": "Description:",
+                      "type": "span",
+                    },
+                    undefined,
+                  ],
+                  "type": "div",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <span>
+                        Price:
+                      </span>,
+                      <span
+                        className="shop__point-price"
+                      />,
+                    ],
+                    "className": "shop__point",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Price:",
+                      },
+                      "ref": null,
+                      "rendered": "Price:",
+                      "type": "span",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": undefined,
+                        "className": "shop__point-price",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "span",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

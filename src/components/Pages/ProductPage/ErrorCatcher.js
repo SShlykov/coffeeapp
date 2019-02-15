@@ -31,9 +31,10 @@ export default class ErrorCatcher extends Component {
     loadItem = (id) => {
         this.cDataService.getCoffee(id)
             .then(data => {
+                if(data.description){
                 if(data.description.length>200){
                     data.smallDescr = `${data.description.slice(0,200)}...`
-                    }
+                    }}
                 return data
             })
             .then(this.onItemLoaded)

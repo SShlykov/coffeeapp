@@ -1,14 +1,16 @@
 import React, {Component} from "react";
 
 export default class Filter extends Component {
-    buttons = [
-        {name: "Brazil"},
-        {name: "Kenya"},
-        {name: "Columbia"},
-    ];
+    state = {
+        buttons: [
+            {name: "Brazil"},
+            {name: "Kenya"},
+            {name: "Columbia"},
+        ]
+    }
     render() {
         const {filter, onFilterChange} = this.props;
-        const buttons = this.buttons.map(({name}) => {
+        const buttons = this.state.buttons.map(({name}) => {
             const isActive = filter === name;
             const clazzName = isActive? "shop__filter-btn active": "shop__filter-btn";
             return(

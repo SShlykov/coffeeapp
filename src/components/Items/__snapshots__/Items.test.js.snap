@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <Items/> Testing snap & state Items bar have rendered correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Items
+    data={
+      Array [
+        Object {
+          "id": 1,
+          "name": "my name",
+          "price": "my price",
+          "url": "wow",
+        },
+        Object {
+          "id": 2,
+          "name": "othersu name",
+          "price": "othersu price",
+          "url": "wow",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="col-lg-10 offset-lg-1"
+      >
+        <div
+          className="shop__wrapper"
+        >
+          <withRouter(Item)
+            id={1}
+            type="shop"
+          />
+          <withRouter(Item)
+            id={2}
+            type="shop"
+          />
+        </div>
+      </div>,
+      "className": "row",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="shop__wrapper"
+        >
+          <withRouter(Item)
+            id={1}
+            type="shop"
+          />
+          <withRouter(Item)
+            id={2}
+            type="shop"
+          />
+        </div>,
+        "className": "col-lg-10 offset-lg-1",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <withRouter(Item)
+              id={1}
+              type="shop"
+            />,
+            <withRouter(Item)
+              id={2}
+              type="shop"
+            />,
+          ],
+          "className": "shop__wrapper",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "function",
+            "props": Object {
+              "id": 1,
+              "type": "shop",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "function",
+            "props": Object {
+              "id": 2,
+              "type": "shop",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="col-lg-10 offset-lg-1"
+        >
+          <div
+            className="shop__wrapper"
+          >
+            <withRouter(Item)
+              id={1}
+              type="shop"
+            />
+            <withRouter(Item)
+              id={2}
+              type="shop"
+            />
+          </div>
+        </div>,
+        "className": "row",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="shop__wrapper"
+          >
+            <withRouter(Item)
+              id={1}
+              type="shop"
+            />
+            <withRouter(Item)
+              id={2}
+              type="shop"
+            />
+          </div>,
+          "className": "col-lg-10 offset-lg-1",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <withRouter(Item)
+                id={1}
+                type="shop"
+              />,
+              <withRouter(Item)
+                id={2}
+                type="shop"
+              />,
+            ],
+            "className": "shop__wrapper",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "function",
+              "props": Object {
+                "id": 1,
+                "type": "shop",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "function",
+              "props": Object {
+                "id": 2,
+                "type": "shop",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
